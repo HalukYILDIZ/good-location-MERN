@@ -1,7 +1,17 @@
-const http = require("http");
-http.createServer((req,res)=>{
-    console.log('INCOMMİNG');
+const http = require('http');
+ 
+// create server gets two arguments from server after making request 
+const server = http.createServer((req,res) => {
+    
+    console.log(`INCOMING request`)
     console.log(req.method,req.url);
-    res.end('success');
+    // console.log(req.url)
+ 
+    // end
+    res.end('Success!')
+ 
 });
-server.listen(5000);
+ 
+// listen is event listener for requests
+// opens local server on machine 
+server.listen(5000)
